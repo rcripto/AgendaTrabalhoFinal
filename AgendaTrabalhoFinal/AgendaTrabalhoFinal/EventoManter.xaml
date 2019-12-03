@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaTrabalhoFinal.EventoManter"
+             Title="Evento">
+
+    <ContentPage.Content>
+        <StackLayout Padding="10,10,10,10" Orientation="Vertical">
+            <Label Text="Detalhes do evento"
+               Margin="0, 20"
+               HorizontalTextAlignment="Center" />
+
+            <Label Text="Data:" 
+                   FontSize="Small" />
+
+            <DatePicker x:Name="dPDataEvento"
+                    FontSize="Micro"
+                    Format="dd/MM/yyyy"
+                    DateSelected="OnDateSelected" />
+
+            <Label Text="Hora inicial:" 
+                   FontSize="Small" />
+            <TimePicker x:Name="tPHoraInicial"
+                        FontSize="Micro"
+                        Time="11:00:00"
+                        Format="T" />
+
+            <Label Text="Hora final:" 
+                   FontSize="Small" />
+            <TimePicker x:Name="tPHoraFinal"
+                        FontSize="Micro"
+                        Format="T" />
+
+            <Label Text="Descrição do evento"
+                   FontSize="Small" />
+            <Entry Text=""
+                   FontSize="Micro"
+                   MaxLength="100" />
+
+            <Button Text="Salvar" FontSize="10" WidthRequest="70" Clicked="BtnSalvar_Clicked" x:Name="btnSalvar" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

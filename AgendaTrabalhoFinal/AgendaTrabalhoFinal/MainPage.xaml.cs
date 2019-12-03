@@ -13,5 +13,16 @@ namespace AgendaTrabalhoFinal
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            if (e == null)
+            {
+                return;
+            }
+
+            var eventoManter = new EventoManter();
+            Navigation.PushModalAsync(eventoManter);
+        }
     }
 }

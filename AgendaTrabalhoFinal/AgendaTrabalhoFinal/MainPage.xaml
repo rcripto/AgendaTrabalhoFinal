@@ -5,10 +5,8 @@
              x:Class="AgendaTrabalhoFinal.MainPage"
              Title="Agenda compromissos">
 
-    <StackLayout>
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Orientation="Vertical">
+        <Button Text="Novo" Clicked="Button_Clicked" />
     </StackLayout>
 
 </ContentPage>
