@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AgendaTrabalhoFinal.Model;
 
 namespace AgendaTrabalhoFinal
 {
@@ -35,11 +36,17 @@ namespace AgendaTrabalhoFinal
         {
             //lblData.Text = e.NewDate.Day + "/" + e.NewDate.Month + "/" + e.NewDate.Year;
         }
-    
 
-        private void BtnSalvar_Clicked(object sender, EventArgs e)
+        private async void OnSaveEvento(object sender, EventArgs args)
         {
+            var evento = (Evento)BindingContext;
+            await App.Database.SaveItemAsync(evento);
+            await Navigation.PopAsync();
+        }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
         }
     }
 }

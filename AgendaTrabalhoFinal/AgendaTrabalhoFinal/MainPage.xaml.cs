@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using AgendaTrabalhoFinal.Model;
 
 namespace AgendaTrabalhoFinal
 {
@@ -14,15 +15,29 @@ namespace AgendaTrabalhoFinal
             InitializeComponent();
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            ListView.ItemsSource = await App.Database.GetItemsAsync();
+        }
+
+        private void onItemSelected(object sender, SelectedItemChangedEventArgs args)
+        {
+            if (args != null)
+            {
+                Navigation.PushAsync(new PageEventoView()
+                {
+                    BindingContext = args.SelectedItem as Evento
+                });
+            }
+        }
+
         private void Button_Clicked(object sender, EventArgs e)
         {
-            if (e == null)
+            Navigation.PushAsync(new EventoManter
             {
-                return;
-            }
-
-            var eventoManter = new EventoManter();
-            Navigation.PushModalAsync(eventoManter);
+                BindingContext = new Evento()
+            });
         }
     }
 }
