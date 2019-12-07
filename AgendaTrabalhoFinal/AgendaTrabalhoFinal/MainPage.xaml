@@ -15,7 +15,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Label Text="{Binding DataEvento}" XAlign="Center" YAlign="Center" />
+                            <Label Text="{Binding DataEvento} " XAlign="Center" YAlign="Center" />
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

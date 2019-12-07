@@ -9,6 +9,7 @@ namespace AgendaTrabalhoFinal.Model
     {
         [PrimaryKey, AutoIncrement]
         public uint ID { get; set; }
+        public string NomeEvento { get; set; }
         public DateTime DataEvento { get; set; }
         public DateTime HoraInicial { get; set; }
         public DateTime HoraFinal { get; set; }
