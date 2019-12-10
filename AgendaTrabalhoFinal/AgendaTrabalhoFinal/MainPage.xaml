@@ -7,7 +7,11 @@
 
     <ScrollView>
         <StackLayout Orientation="Vertical">
-            <Button Text="Novo" Clicked="Button_Clicked" />
+            <Button FontSize="8"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    Text="Novo"
+                    Clicked="Button_Clicked" />
             <ListView x:Name="ListView"
                       Margin="20"
                       ItemSelected="onItemSelected">
@@ -15,7 +19,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Label Text="{Binding DataEvento} " XAlign="Center" YAlign="Center" />
+                            <Label Text="{Binding ExibicaoEvento}" FontSize="10" FontAttributes="Bold" XAlign="Center" YAlign="Center" />
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

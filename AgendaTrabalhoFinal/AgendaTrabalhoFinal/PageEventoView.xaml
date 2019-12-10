@@ -6,46 +6,52 @@
         <ScrollView>
             <StackLayout Padding="10,10,10,10" Orientation="Vertical">
 
-                <Label Text="Detalhes do evento"
+                <Label Text="Evento"
                    Margin="0, 10"
                    HorizontalTextAlignment="Center" />
 
-                <Label Text="Nome do evento"
-                       FontSize="Small" />
-                <Entry Text="{Binding NomeEvento}"
-                       FontSize="Micro"
-                       MaxLength="100" />
+                <Label Text="Nome do evento:"
+                       FontAttributes="Bold"
+                       FontSize="10" />
+                <Label Text="{Binding NomeEvento}"
+                       FontSize="8"
+                       FontAttributes="Bold"
+                       TextColor="Blue" />
 
-                <Label Text="Data:" 
-                       FontSize="Small" />
+                <Label Text="Data:"
+                       FontAttributes="Bold"
+                       FontSize="10" />
+                <Label Text="{Binding DataEventoFormatado}"
+                       FontSize="8"
+                       FontAttributes="Bold"
+                       TextColor="Blue" />
 
-                <DatePicker x:Name="dPDataEvento" 
-                        FontSize="Micro"
-                        Format="dd/MM/yyyy"
-                        Date="{Binding DataEvento}" />
-
-                <Label Text="Hora inicial:" 
-                       FontSize="Small" />
-                <TimePicker x:Name="tPHoraInicial"
-                            FontSize="Micro"
-                            Format="T"
-                            Time="{Binding HoraInicial}" />
+                <Label Text="Hora inicial:"
+                       FontAttributes="Bold"
+                       FontSize="10" />
+                <Label Text="{Binding HoraInicialFormatado}"
+                       FontSize="8"
+                       FontAttributes="Bold"
+                       TextColor="Blue" />
 
                 <Label Text="Hora final:" 
-                       FontSize="Small" />
-                <TimePicker x:Name="tPHoraFinal"
-                            FontSize="Micro"
-                            Format="T"
-                            Time="{Binding HoraFinal}" />
+                       FontAttributes="Bold"
+                       FontSize="10" />
+                <Label Text="{Binding HoraFinalFormatado}"
+                       FontSize="8"
+                       FontAttributes="Bold"
+                       TextColor="Blue" />
 
-                <Label Text="Descrição do evento"
-                       FontSize="Small" />
-                <Entry Text="{Binding DescricaoEvento}"
-                       FontSize="Micro"
-                       MaxLength="100" />
+                <Label Text="Descrição do evento:"
+                       FontAttributes="Bold"
+                       FontSize="10" />
+                <Label Text="{Binding DescricaoEvento}"
+                       FontSize="8"
+                       FontAttributes="Bold"
+                       TextColor="Blue" />
 
-                <Button Text="Editar" FontSize="10" WidthRequest="70" Clicked="OnEditEvento" x:Name="btnEditar" />
-                <Button Text="Excluir" FontSize="10" WidthRequest="70" Clicked="OnDeleteEvento" x:Name="btnDeletar" />
+                <Button Text="Editar" FontSize="8" HeightRequest="40" WidthRequest="40" Clicked="OnEditEvento" x:Name="btnEditar" />
+                <Button Text="Excluir" FontSize="8" HeightRequest="40" WidthRequest="40" Clicked="OnDeleteEvento" x:Name="btnDeletar" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

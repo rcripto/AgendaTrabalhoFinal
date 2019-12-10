@@ -17,9 +17,12 @@ namespace AgendaTrabalhoFinal
 		{
 			InitializeComponent ();
 
-            dPDataEvento.Date = DateTime.Now.ToLocalTime();
-            tPHoraInicial.Time = DateTime.Now.ToLocalTime().TimeOfDay;
-            tPHoraFinal.Time = DateTime.Now.ToLocalTime().TimeOfDay;
+            if (lblID.Text == null)
+            {
+                dPDataEvento.Date = DateTime.Now;
+                tPHoraInicial.Time = DateTime.Now.ToLocalTime().TimeOfDay;
+                tPHoraFinal.Time = DateTime.Now.ToLocalTime().TimeOfDay;
+            }
         }
 
         void OnDateSelected(object sender, DateChangedEventArgs args)

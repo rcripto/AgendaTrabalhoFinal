@@ -22,6 +22,7 @@ namespace AgendaTrabalhoFinal
         {
             if (args != null)
             {
+                Navigation.PopAsync();
                 Navigation.PushAsync(new EventoManter()
                 {
                     BindingContext = (Evento)BindingContext

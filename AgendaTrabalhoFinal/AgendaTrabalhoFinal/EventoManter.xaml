@@ -6,41 +6,54 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="10,10,10,10" Orientation="Vertical">
+            <StackLayout Padding="5,5,5,5" Orientation="Vertical">
 
                 <Label Text="Detalhes do evento"
-                   Margin="0, 20"
                    HorizontalTextAlignment="Center" />
 
-                <Label Text="Data:" 
-                       FontSize="Small" />
+                <Label x:Name="lblID"
+                       Text="{Binding ID}"
+                       IsVisible="False" />
 
+                <Label Text="Nome do evento"
+                       FontAttributes="Bold"
+                       FontSize="10" />
+                <Entry Text="{Binding NomeEvento}"
+                       FontSize="8"
+                       MaxLength="100" />
+
+                <Label Text="Data:"
+                       FontAttributes="Bold"
+                       FontSize="10" />
                 <DatePicker x:Name="dPDataEvento" 
-                        FontSize="Micro"
+                        FontSize="8"
                         Format="dd/MM/yyyy"
                         Date="{Binding DataEvento}" />
 
                 <Label Text="Hora inicial:" 
-                       FontSize="Small" />
+                       FontAttributes="Bold"
+                       FontSize="10" />
                 <TimePicker x:Name="tPHoraInicial"
-                            FontSize="Micro"
-                            Format="T"
+                            FontSize="8"
+                            Format="HH:mm"
                             Time="{Binding HoraInicial}" />
 
                 <Label Text="Hora final:" 
-                       FontSize="Small" />
+                       FontAttributes="Bold"
+                       FontSize="10" />
                 <TimePicker x:Name="tPHoraFinal"
-                            FontSize="Micro"
-                            Format="T"
+                            FontSize="8"
+                            Format="HH:mm"
                             Time="{Binding HoraFinal}" />
 
                 <Label Text="Descrição do evento"
-                       FontSize="Small" />
+                       FontAttributes="Bold"
+                       FontSize="10" />
                 <Entry Text="{Binding DescricaoEvento}"
-                       FontSize="Micro"
+                       FontSize="8"
                        MaxLength="100" />
 
-                <Button Text="Salvar" FontSize="10" WidthRequest="70" Clicked="OnSaveEvento" x:Name="btnSalvar" />
+                <Button Text="Salvar" FontSize="8" HeightRequest="40" WidthRequest="40" Clicked="OnSaveEvento" x:Name="btnSalvar" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
